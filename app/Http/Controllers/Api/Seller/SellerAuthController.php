@@ -24,8 +24,6 @@ class SellerAuthController extends Controller
     }
 
 
-
-
     public function makeToken($seller)
     {
         $token =  $seller->createToken('seller-token')->plainTextToken;

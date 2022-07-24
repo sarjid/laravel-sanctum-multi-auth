@@ -26,8 +26,6 @@ class AdminAuthController extends Controller
     }
 
 
-
-
     public function makeToken($admin)
     {
         $token =  $admin->createToken('admin-token')->plainTextToken;
