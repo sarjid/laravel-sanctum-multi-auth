@@ -8,3 +8,10 @@ Route::controller(SellerAuthController::class)->group(function () {
     Route::post('/register', 'register');
 });
 
+Route::middleware('auth:seller-api')->group(function () {
+    Route::controller(AdminAuthController::class)->group(function () {
+        Route::post('/logout', 'logout');
+        Route::get('/me',  'user');
+    });
+});
+
